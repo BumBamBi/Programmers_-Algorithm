@@ -33,7 +33,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
     }
 
     int cnt = 0;
-    int num = 0;
+    int truck_weights_index = 0;
     
     while(finish != total){
         // 맨 앞에있는 원소(차)를 빼내고
@@ -41,9 +41,9 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
         myqueue.pop();
         
         // 효용량 >= 다리에 남아있는 차들의 무게 + 다리에 들어올 차의 무게      라면 새로운 차 입장
-        if(weight >= sum_cur_weight(myqueue) + truck_weights[num]){
-            myqueue.push(truck_weights[num]);
-            num += 1;
+        if(weight >= sum_cur_weight(myqueue) + truck_weights[truck_weights_index]){
+            myqueue.push(truck_weights[truck_weights_index]);
+            truck_weights_index += 1;
         }
         // 그 외의 경우 빈칸
         else{
