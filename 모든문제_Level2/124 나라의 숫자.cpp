@@ -30,7 +30,6 @@ string solution(int n) {
             min_std += pow(3,d-1);
         }
     }
-    cout << d << "자리" << endl;
     
     // 자리수에 따라 잘라낸 블록의 총 크기
     // ex) 2자리 4~12 이므로 9
