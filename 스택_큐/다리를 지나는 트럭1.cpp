@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <numeric>
 
 using namespace std;
 
@@ -16,23 +17,20 @@ int sum_cur_weight(queue<int> que){
 }
 
 int solution(int bridge_length, int weight, vector<int> truck_weights) {
-    queue<int> myqueue;
-
-    // 지나갈 모든 차량의 무게 합
-    int total = 0;
-    for(auto e:truck_weights){
-        total += e;
-    }
-
-    // 지나간 차량의 무게 합
-    int finish = 0;
-
+    
     // 다리(큐)를 0으로 채우기
+    queue<int> myqueue;
     for(int i=0; i<bridge_length; i++){
         myqueue.push(0);
     }
 
-    int cnt = 0;
+    // 지나갈 모든 차량의 무게 합
+    int total = accumulate(truck_weights.begin(), truck_weights.end(), 0);
+
+    // 지나간 차량의 무게 합
+    int finish = 0;
+
+    int time_cnt = 0;
     int truck_weights_index = 0;
     
     while(finish != total){
@@ -49,8 +47,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
         else{
             myqueue.push(0);
         }
-        cnt += 1;
+        time_cnt += 1;
     }
-
-    return cnt;
+    return time_cnt;
 }
