@@ -1,3 +1,5 @@
+// dfs 시 stack을 이용하는 경우
+
 #include <string>
 #include <vector>
 #include <stack>
