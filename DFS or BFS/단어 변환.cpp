@@ -78,7 +78,7 @@ int solution(string begin, string target, vector<string> words) {
         }
     }
     
-    // 변환할 수 없는 경우
+    // 변환할 수 없는 경우(target이 없거나, target으로 변환하는 경우가 없는 경우)
     if(answer == 9999){
         return 0;
     }else{
