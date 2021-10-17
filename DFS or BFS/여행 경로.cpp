@@ -25,10 +25,13 @@ void DFS(string start, vector<vector<string>>& tickets, vector<bool>& visit, vec
 }
 
 vector<string> solution(vector<vector<string>> tickets) {
+
     int cnt = 0;
+    
     vector<string> answer, temp;
     vector<bool> visit(tickets.size(), false);
     sort(tickets.begin(), tickets.end());
+    
     DFS("ICN", tickets, visit, answer, temp, cnt);
     return answer;
 }
