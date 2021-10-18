@@ -32,6 +32,7 @@ vector<string> solution(vector<vector<string>> tickets) {
     vector<bool> visit(tickets.size(), false);
     sort(tickets.begin(), tickets.end());
     
+    // ICN에서 시작하는 DFS실행
     DFS("ICN", tickets, visit, answer, temp, cnt);
     return answer;
 }
