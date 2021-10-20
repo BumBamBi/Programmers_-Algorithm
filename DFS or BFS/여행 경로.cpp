@@ -4,11 +4,14 @@
 
 using namespace std;
 
+// 총 이동 경로 카운트를 하는 변수
 int max_cnt = 0;
 
 void DFS(string start, vector<vector<string>>& tickets, vector<bool>& visit, vector<string>& answer, vector<string>& temp, int cnt) {
+    // 
     temp.push_back(start);
     
+    // 
     if (max_cnt < cnt) {
         max_cnt = cnt;
         answer = temp;
