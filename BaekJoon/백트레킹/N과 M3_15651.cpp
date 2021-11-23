@@ -4,7 +4,8 @@
 using namespace std;
 
 void func(int N, int M, vector<int> visited, int len) {
-	if (len == M) {
+	// 마지막 출력단계
+    if (len == M) {
 		for(auto e:visited){
             cout << e << ' ';
         }
