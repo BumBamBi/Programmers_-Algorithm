@@ -11,12 +11,14 @@ void func(int N, int M, vector<int> visited, int len) {
         }
 		cout << '\n';
 		return;
-	}
-	for (int i = 1; i <= N; i++) {
-        visited.push_back(i);
-		func(N, M, visited, len + 1);
-        visited.pop_back();
-	}
+	}else{
+        // 1~N까지 반복해서 재귀
+        for (int i = 1; i <= N; i++) {
+            visited.push_back(i);
+            func(N, M, visited, len + 1);
+            visited.pop_back();
+        }
+    }
 }
 
 int main() {
