@@ -1,4 +1,7 @@
 .vscode/
 *.exe
+
 std.cpp
+test.cpp
+
 z*.cpp
