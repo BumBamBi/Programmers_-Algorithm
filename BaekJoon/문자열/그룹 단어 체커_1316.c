@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
 bool func(char * str){
     char alpha[26] = {};
 
@@ -27,8 +26,6 @@ bool func(char * str){
 int main(){
     int N;
     scanf("%d", &N);
-
-
     
     int result = 0;
     for(int i=0; i<N; i++){
