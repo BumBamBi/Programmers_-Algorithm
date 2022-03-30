@@ -35,3 +35,23 @@ priority_queue<T, vector<T>, compare> pq;
 - push()
 - pop()
 - top()
+
+
+### tuple
+
+```c++
+#include <tuple>
+
+// 선언
+tuple<T, T, T ... > tupleName;
+// 초기화
+tuple<T, T, T ... > tupleName( , , , ....);
+
+// 생성하기
+make_tuple(10, 'x', "string");
+
+// 값 가져오기
+get<0>(tupleName);
+
+
+```
