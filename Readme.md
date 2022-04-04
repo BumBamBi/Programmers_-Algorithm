@@ -55,3 +55,12 @@ get<0>(tupleName);
 
 
 ```
+
+
+### 함수 내 배열
+
+(int a[][길이])
+
+### 동적 선언
+
+int* arr = new int[10];
