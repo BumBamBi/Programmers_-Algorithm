@@ -21,6 +21,18 @@ v[index];
 v.size();
 ```
 
+## algorithm
+
+```c++
+#include <altorithm>
+
+bool condition(T a1, T a2){ // 앞, 뒤 라고 생각하고
+    return a1 < a2;         // 앞에보다 뒤에가 더 크니, 오름차순
+}
+
+sort(v.begin(), v.end(), condition);
+```
+
 ## map/set
 
 ## stack/queue
@@ -37,6 +49,8 @@ v.size();
 - pop()
 - front()
 - back()
+
+
 
 ### priority_queue
 
