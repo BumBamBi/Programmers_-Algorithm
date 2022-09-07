@@ -3,18 +3,20 @@
 ```c++
 #include<vector>
 
-vName.push_back();
-vName.front();
-vName.back();
-vName.pop_back();
-vName.empty();
-vName.begin();
-vName.end();
-vName.erase(adr);          // adr(주소) = (vName.begin() - i)
-vName.insert(adr, value);  // 해당 adr(주소) 바로 앞에 값을 삽입 ->
-vName.at(index);           // index로 접근
-vName[index];
-vName.size();
+vector<T> myvec = vector<T>();
+
+myvec.push_back();
+myvec.front();
+myvec.back();
+myvec.pop_back();
+myvec.empty();
+myvec.begin();
+myvec.end();
+myvec.erase(adr);          // adr(주소) = (myvec.begin() - i)
+myvec.insert(adr, value);  // 해당 adr(주소)에 값이 있도록 삽입    // 123 + insert(begin()+1, 0) => 1023
+myvec.at(index);           // index로 접근
+myvec[index];
+myvec.size();
 ```
 
 ## map/set
