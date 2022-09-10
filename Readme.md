@@ -62,7 +62,7 @@ class T{
 class compare{
     operator()(T a, T b){
         // 기존 compare과 반대
-        return a < b
+        return a < b    // 이러면 이제 내림차순 pq가 되는 것임
     }
 }
 
