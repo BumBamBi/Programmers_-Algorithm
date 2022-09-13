@@ -35,8 +35,48 @@ sort(v.begin(), v.end(), condition);
 
 ## map/set
 
-map : 
+map : 키-값으로 정의 된 STL. 중복을 허용하지 않음
 set : 집합. 중복되지 않는 유일 값을 저장하는 STL
+
+### map
+```c++
+// 정의/선언
+// ------------------
+#include <map>
+// 기본적으로 map은 오름차순임
+map<key, value> mymap;
+
+// 내림차순으로 정의하고 싶다면
+map<key, value, greater> mymap;
+
+
+// 찾기
+// ------------------
+mymap.fine(KEY) // 값을 찾지 못한다면 map의 end()를 반환
+
+// if문 활용
+if(mymap.find("KEY") != mymap.end()){
+    // 값이 있다는 것
+}
+
+// for문 활용
+for(auto e:mymap){
+    // first와 second로 접근 가능
+    cout << e.first << endl;
+    cout << e.second << endl;
+}
+
+// 삽입
+// ------------------
+mymap.insert({KEY,VALUE});
+
+// 삭제
+// ------------------
+mymap.erase(주소);  // mymap.erase(mymap.begin() + a);
+mymap.erase(KEY);   // mymap.erase(KEY);
+mymap.clear();
+```
+
 
 ## stack/queue
 
