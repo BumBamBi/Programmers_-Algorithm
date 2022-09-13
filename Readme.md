@@ -77,6 +77,48 @@ mymap.erase(KEY);   // mymap.erase(KEY);
 mymap.clear();
 ```
 
+### set
+
+```c++
+정의/선언
+// ------------------
+#include <set>
+// 기본적으로 set 오름차순임
+set<T> myset;
+set<pair<T,T>> myset; // pair도 가능
+set<T> set2(set1);      // set1을 복사해서 set2에 저장
+
+// 내림차순으로 정의하고 싶다면?
+
+// 찾기
+// ------------------
+myset.fine(Value);  // 값을 찾지 못한다면 set의 end()를 반환
+
+// if문 활용
+if(myset.find(Value) != myset.end()){
+    // 값이 있다는 것
+}
+
+// for문 활용
+for(auto e:myset){
+    // 어떻게 확인해야할지 체크
+}
+
+for(auto iter = myset.begin(); iter != myset.end(); iter++){
+    // 어떻게 확인해야하지 체크
+}
+
+// 삽입
+// ------------------
+myset.insert(Value);
+myset.insert(주소, Value);
+
+// 삭제
+// ------------------
+myset.erase(주소);      // myset.erase(myset.begin() + a);
+myset.erase(Value);     // myset.erase(KEY);
+myset.clear();
+```
 
 ## stack/queue
 
