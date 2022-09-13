@@ -35,6 +35,9 @@ sort(v.begin(), v.end(), condition);
 
 ## map/set
 
+map : 
+set : 집합. 중복되지 않는 유일 값을 저장하는 STL
+
 ## stack/queue
 
 ### stack
