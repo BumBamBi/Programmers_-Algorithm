@@ -141,18 +141,17 @@ myset.clear();
 
 ```c++
 class T{
+public:
 
 }
 
 class compare{
-    operator()(T a, T b){
-        // 기존 compare과 반대
-        return a < b    // 이러면 이제 내림차순 pq가 되는 것임
+public:
+    bool operator()(T a, T b){
+        return a. < b.;
     }
-}
+};
 
-priority_queue<T, vector<T>, less<T>> pq;   // default  - 내림차순 (최대힙)
-priority_queue<T, vector<T>, greater<T>> pq;
 priority_queue<T, vector<T>, compare> pq;
 ```
 
