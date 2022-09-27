@@ -197,6 +197,8 @@ swap(tuple1, tuple2);
 
 int\* arr = new int[10];
 
+## toupper / tolower
+한글자 단위로 대소문자 변환
 
 ## upper_bound / lower_bound
 특정 값 초과 / 이하인 숫자가, 몇번째 인덱스에서 처음 시작하는지 확인(오름차순)
