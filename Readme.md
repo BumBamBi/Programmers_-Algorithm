@@ -196,3 +196,17 @@ swap(tuple1, tuple2);
 ### 동적 선언
 
 int\* arr = new int[10];
+
+
+## upper_bound / lower_bound
+특정 값 초과 / 이하인 숫자가, 몇번째 인덱스에서 처음 시작하는지 확인(오름차순)
+
+vector<int> vec;
+vec.push_back(0);
+vec.push_back(1);
+vec.push_back(2);
+
+upper_bound(vec.begin(), vec.end(), 1); // 1;
+lower_bound(vec.begin(), vec.end(), 1); // 0;
+
+-> 두개를 조합하여 n~m의 숫자 개수 확인 가능

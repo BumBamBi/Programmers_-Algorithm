@@ -1,45 +1,69 @@
 #include <string>
 #include <vector>
-#include <queue>
-#include <iostream>
+#include <map>
 
 using namespace std;
 
 int answer = 0;
+map<string, int> mymap;
 
-class Node{
-public:
-    string name;
-    int w;
-
-    Node(string name, int w){
-        this->name = name;
-        this->w = w;
+bool isInMap(string s){
+    for(auto e:mymap){
+        if(e.first == s){
+            return true;
+        }
     }
-};
+    return false;
+}
 
-class compare{
-public:
-    bool operator()(Node a, Node b){
-        return a.w < b.w;
+void addWegiht(){
+    for(auto e:mymap){
+        mymap[e.first]++;
     }
-};
+}
 
-int main() {
+void delMap(){
+    int maxNum = -1;
+    string s = "";
     
-    priority_queue<Node, vector<Node>, compare> pq;
-
-    pq.push(Node("test1", 1));
-    pq.push(Node("test2", 2));
-    pq.push(Node("test3", 3));
-
-    int qSize = pq.size();
-    for (int i = 0; i < qSize ; i++)
-    {
-        Node temp = pq.top();
-        pq.pop();
-        cout << temp.name << temp.w << endl;
+    for(auto& e:mymap){
+        if(maxNum < e.second){
+            maxNum = e.second;
+            s = e.first;
+        }        
     }
+    
+    if(maxNum != -1){
+        mymap.erase(s);
+    }
+}
 
+int solution(int cacheSize, vector<string> cities) {
+    
+    if(cacheSize == 0){
+        answer = cities.size()*5;
+    }else{
+        for(auto e:cities){
+            addWegiht();
+            if(mymap.size() < cacheSize){
+                if(isInMap(e)){
+                    mymap[e] = 0;
+                    answer++;
+                }else{
+                    mymap.insert({e,0});
+                    answer += 5;
+                }
+            }else{
+                if(isInMap(e)){
+                    mymap[e] = 0;
+                    answer++;
+                }else{
+                    delMap();
+                    mymap.insert({e,0});
+                    answer += 5;
+                }
+            }
+        }
+    }
     return answer;
 }
