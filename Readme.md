@@ -15,7 +15,7 @@ v.empty();
 v.begin();
 v.end();
 v.erase(adr);          // adr(주소) = (v.begin() - i)
-v.insert(adr, value);  // 해당 adr(주소)에 값이 있도록 삽입    // 123 + insert(begin()+1, 0) => 1023
+v.insert(adr, value);  // 해당 adr(주소)에 값이 있도록 삽입    // 123 + insert(begin()+1, 0) => 1023 // v.insert(v.begin(), value); <- push_front()와 동일
 v.at(index);           // index로 접근
 v[index];
 v.size();
