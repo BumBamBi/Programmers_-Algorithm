@@ -127,16 +127,12 @@ myset.clear();
 - push()
 - pop()
 - top()
-
 ### queue
 
 - push()
 - pop()
 - front()
 - back()
-
-
-
 ### priority_queue
 
 ```c++
