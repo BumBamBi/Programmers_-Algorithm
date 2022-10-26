@@ -121,7 +121,6 @@ myset.clear();
 ```
 
 ## stack/queue
-
 ### stack
 
 - push()
