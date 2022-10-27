@@ -153,7 +153,6 @@ priority_queue<T, vector<T>, less<T>> pq; // 최소힙
 priority_queue<T, vector<T>, compare> pq; // 사용자 조건
 
 ```
-
 - push()
 - pop()
 - top()
