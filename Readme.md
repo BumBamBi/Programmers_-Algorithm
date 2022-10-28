@@ -186,7 +186,6 @@ tie(x,str1,str2) = tupleName;
 swap(tuple1, tuple2);
 
 ```
-
 ### 함수 내 배열
 
 (int a[][길이])
