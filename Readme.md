@@ -35,7 +35,7 @@ sort(v.begin(), v.end(), condition);
 
 ## map/set
 
-map : 키-값으로 정의 된 STL. 중복을 허용하지 않음
+map : 키-값으로 정의 된 STL. 중복을 허용하지 않음 (키가 동일한 값을 insert하면, 무시해버림(기존값 우선))
 set : 집합. 중복되지 않는 유일 값을 저장하는 STL
 
 ### map
