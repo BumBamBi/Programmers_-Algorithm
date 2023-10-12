@@ -55,9 +55,12 @@ map<key, value, greater> mymap;
 mymap.fine(KEY) // 값을 찾지 못한다면 map의 end()를 반환
 
 // if문 활용
-if(mymap.find("KEY") != mymap.end()){
+if(mymap.find(KEY) != mymap.end()){
     // 값이 있다는 것
 }
+
+// index 접근
+mymap.begin()->first;
 
 // for문 활용
 for(auto e:mymap){
