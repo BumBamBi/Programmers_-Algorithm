@@ -22,6 +22,9 @@ v.insert(adr, value);  // 해당 adr(주소)에 값이 있도록 삽입    // 12
 v.at(index);           // index로 접근
 v[index];
 v.size();
+
+// 동적할당 생성
+vector<vector<int>> v(N, vector<int>(M,0)); // N x M 의 0개로 채워진 2차원 배열
 ```
 
 ## algorithm
