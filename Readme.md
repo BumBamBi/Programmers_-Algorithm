@@ -150,8 +150,8 @@ public:
     }
 };
 
-priority_queue<T, vector<T>> pq; // 기본 최대힙(greater<T>)
-priority_queue<T, vector<T>, less<T>> pq; // 최소힙
+priority_queue<T, vector<T>> pq; // 기본 오름차순(최소힙(greater<T>)
+priority_queue<T, vector<T>, less<T>> pq; // 내림차순(최대힙)
 
 priority_queue<T, vector<T>, compare> pq; // 사용자 조건
 
