@@ -7,6 +7,9 @@ vector<T> v;
 vector<pair<int, int>> v;
 vector<tuple<int, int, T, T>> v;
 
+// 중복제거
+v.erase(unique(v.begin(), v.end()), v.end())
+
 v.push_back();
 v.front();
 v.back();
