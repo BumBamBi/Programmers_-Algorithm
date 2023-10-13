@@ -7,6 +7,12 @@ vector<T> v;
 vector<pair<int, int>> v;
 vector<tuple<int, int, T, T>> v;
 
+// 생성
+vector<T> v(N, 0);  // N개만큼 0으로 초기화
+vector<vector<T>> v(N, vector<T>(M,0)); // N x M 의 0개로 채워진 2차원 배열
+
+
+
 // 중복제거
 v.erase(unique(v.begin(), v.end()), v.end())
 
@@ -23,8 +29,7 @@ v.at(index);           // index로 접근
 v[index];
 v.size();
 
-// 동적할당 생성
-vector<vector<int>> v(N, vector<int>(M,0)); // N x M 의 0개로 채워진 2차원 배열
+
 ```
 
 ## algorithm
