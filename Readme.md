@@ -11,6 +11,8 @@ vector<tuple<int, int, T, T>> v;
 vector<T> v(N, 0);  // N개만큼 0으로 초기화
 vector<vector<T>> v(N, vector<T>(M,0)); // N x M 의 0개로 채워진 2차원 배열
 
+// 복사
+vector<T> v(iter, iter2);  // 주소1(a.begin()) ~ 주소2(a.end()) 까지 복사해서 생성
 
 
 // 중복제거
