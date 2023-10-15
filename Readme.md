@@ -18,6 +18,11 @@ vector<T> v(iter, iter2);  // 주소1(a.begin()) ~ 주소2(a.end()) 까지 복�
 // 중복제거
 v.erase(unique(v.begin(), v.end()), v.end())
 
+// 최대/최소
+*max_element(v.begin(), v.end());   // 주소값을 리턴하므로 *
+*min_element(v.begin(), v.end());   // 주소값을 리턴하므로 *
+
+// 기본
 v.push_back();
 v.front();
 v.back();
