@@ -36,7 +36,11 @@ v.at(index);           // index로 접근
 v[index];
 v.size();
 
-
+// 순열
+do{
+}
+while{
+}next_permutation(v.begin(), v.end());
 ```
 
 ## algorithm
