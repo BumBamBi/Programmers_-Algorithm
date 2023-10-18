@@ -37,10 +37,14 @@ v[index];
 v.size();
 
 // 순열
+    // 벡터 미리 정렬필요
+    // 오름차순이면 next_permutation
+    // 내림차순이면 prev_permutation
 do{
 }
 while{
-}next_permutation(v.begin(), v.end());
+}next_permutation(v.begin(), v.end());  //prev_permutation
+
 ```
 
 ## algorithm
