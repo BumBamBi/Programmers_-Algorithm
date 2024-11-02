@@ -1,5 +1,28 @@
 ## include<bits/stdc++.h>
 
+## split
+
+```c++
+<sstream>
+
+void my_split(string _s, char _n){
+    stringstream ss(_s);
+    string temp;
+    
+    while(getline(ss, temp, _n)){
+        cout << temp << endl;
+    }
+}
+---------------------------------
+
+stringstream ss(string)
+string temp1;
+string temp2;
+...
+ss >> temp1 >> temp2 ...
+
+```
+
 ## vector
 
 ```c++
