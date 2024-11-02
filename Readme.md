@@ -264,3 +264,13 @@ upper_bound(vec.begin(), vec.end(), 1); // 1;
 lower_bound(vec.begin(), vec.end(), 1); // 0;
 ```
 -> 두개를 조합하여 n~m의 숫자 개수 확인 가능
+
+## SQL
+
+```sql
+
+INSTR()
+
+CASE
+    WHEN ~~ THEN ~~
+END
